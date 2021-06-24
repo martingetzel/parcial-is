@@ -2,9 +2,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 import FraseAleatoria from './generador';
 
-test('comprueba que la frase sea un string', () => {
-  expect(typeof(FraseAleatoria())).toBe("string");
-});
 
 test('comprueba que el nombre inicial sea "internauta"', () =>{
   const pantalla = render(<App />);

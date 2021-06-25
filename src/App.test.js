@@ -1,6 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import App from './App';
-import FraseAleatoria from './generador';
 
 
 test('comprueba que el nombre inicial sea "internauta"', () =>{

@@ -1,4 +1,4 @@
-export default function FraseAleatoria(){
+export default function FraseAleatoria() {
 
     var frases = [
     'Un sueño no se hace realidad por arte de magia, necesita sudor, determinación y trabajo duro',

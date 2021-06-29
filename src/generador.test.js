@@ -1,5 +1,5 @@
-import FraseAleatoria from './generador.js';
+import FraseElegida from './generador.js'
 
 test('comprueba que la frase sea un string', () => {
-    expect(typeof(FraseAleatoria())).toBe("string");
+    expect(typeof(FraseElegida())).toBe("string");
   });

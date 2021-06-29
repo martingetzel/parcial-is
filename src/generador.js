@@ -83,20 +83,15 @@ function FraseSecreta() {
         return(frase);
   }
 
-function FraseElegida() {
+export default function FraseElegida() {
     var element = document.getElementById('frase');
     if (element == null) {
         return 'Ingresa tu nombre para comenzar'
     } else {
-        console.log(element.classList);
         if (element.classList.contains('secreto')){
             return FraseSecreta();
         } else {
             return FraseAleatoria();
         }
     }
-}
-
-module.exports = {
-    FraseElegida:FraseElegida
 }

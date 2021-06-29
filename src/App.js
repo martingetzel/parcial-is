@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import { FraseElegida } from './generador.js';
+import FraseElegida from './generador.js'
 import Secreto from './nuevafeature.js';
 
 
@@ -33,12 +33,12 @@ function App() {
         </div>
       </header>
       <footer>
-        <div class="boton">
+        <div className="boton">
             Modo curioso
             <br/>
-            <label class="switch">
+            <label className="switch">
               <input type="checkbox" onClick={event => Secreto()}/>
-              <span class="slider round"></span>
+              <span className="slider round"></span>
             </label>
           </div>
       </footer>

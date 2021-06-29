@@ -1,4 +1,4 @@
-export default function FraseAleatoria() {
+function FraseAleatoria() {
 
     var frases = [
     'Un sueño no se hace realidad por arte de magia, necesita sudor, determinación y trabajo duro',
@@ -52,3 +52,51 @@ export default function FraseAleatoria() {
     return(frase);
     
   }
+
+function FraseSecreta() {
+    var frases = [
+        'Que la fuerza esté contigo… siempre',
+        'Deja que el pasado muera. Mátalo, si es necesario',
+        'Si sacrificamos nuestro código, incluso por la victoria, podemos perder lo que es más importante, nuestro honor',
+        'Concéntrate en el momento. Siente, no pienses, usa tu instinto',
+        'Mucho que aprender todavía tienes',
+        'Recuerda: tu enfoque determina tu realidad',
+        'En mi experiencia, no existe la suerte',
+        'Las guerras no hacen grande a uno',
+        'Debes desaprender lo que has aprendido',
+        'Luz. Oscuridad. Todo depende del equilibrio',
+        'Las rebeliones se basan en la esperanza',
+        'No estamos solos. Las buenas personas lucharán si las lideramos',
+        'Tus ojos pueden engañarte; no confíes en ellos',
+        '¿Quién es más necio: el necio o el necio que le sigue?',
+        'Difícil de ver; siempre en movimiento es el futuro',
+        'Entrénate para dejar ir todo lo que temes perder',
+        'La vida no está exenta de dolor, pero es importante que sepamos manejar esa emoción, como la alegría, la confusión o triunfo. La vida es más que el tiempo que pasa antes de la muerte; es la suma y el total de todo lo que hacemos con él',
+        'Te sientes vacío. Te sientes solo. Casi asustado, pero también fuerte, ¿no?  Eres libre y eso puede ser solitario, vacío y aterrador. Pero también es poderoso',
+        'Cuanto más grande es la galaxia, más dulce es el regreso a casa',
+        'Morir por tu pueblo es un gran sacrificio, vivir por tu pueblo es un sacrificio aún mayor. Yo elijo vivir por mi pueblo. ¿Qué elige usted?'
+    ];
+      
+        var num = Math.floor(Math.random()*frases.length);
+        const frase = frases[num];
+      
+        return(frase);
+  }
+
+function FraseElegida() {
+    var element = document.getElementById('frase');
+    if (element == null) {
+        return 'Ingresa tu nombre para comenzar'
+    } else {
+        console.log(element.classList);
+        if (element.classList.contains('secreto')){
+            return FraseSecreta();
+        } else {
+            return FraseAleatoria();
+        }
+    }
+}
+
+module.exports = {
+    FraseElegida:FraseElegida
+}

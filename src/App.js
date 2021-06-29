@@ -5,7 +5,7 @@ import FraseAleatoria from './generador.js';
 
 function App() {
   
-  const [nombre,setNombre] = useState('internauta');
+  const [nombre,setNombre] = useState('internauts');
 
   return (
     <div className="App">

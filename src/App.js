@@ -1,19 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import FraseAleatoria from './generador.js';
+import FraseElegida from './generador.js'
+import Secreto from './nuevafeature.js';
+
 
 function App() {
   
   const [nombre,setNombre] = useState('internauts');
 
   return (
-    <div className="App">
+    <div className="App cambiable">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div style={{fontSize: 15, fontWeight: "bold"}}>
-          Ingresá tu nombre acá abajo: 
-        </div>
+        <img src={logo} className="App-logo cambiable" alt="logo" />
+        
         <div>
           <label id='nombre-label' style={{fontSize: 15}}>Nombre:</label>
           <input
@@ -24,17 +24,27 @@ function App() {
             onChange={event => setNombre(event.target.value)}
           />
           
-          <div className='frase' >
+          <div className='frase cambiable' id='frase'>
             Queridx {nombre}:
             <div>
-              <FraseAleatoria />.
+              <FraseElegida />.
             </div>
-          </div>
-
+          </div>            
         </div>
       </header>
+      <footer>
+        <div className="boton">
+            Modo curioso
+            <br/>
+            <label className="switch">
+              <input type="checkbox" onClick={event => Secreto()}/>
+              <span className="slider round"></span>
+            </label>
+          </div>
+      </footer>
     </div>
   );
 }
+
 
 export default App;
